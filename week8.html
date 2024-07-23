@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+</style>
+<body>
+    <button id="myButton" onclick="handleClick()">KLIK SAYA</button>
+    <script>
+        const button = document.getElementById('myButton');
+        button.addEventListener('click',function() {
+            const hasilMasukan = prompt("Hasil dari 7 * 10 =");
+
+            const penggunaMasuk = parseInt(hasilMasukan);
+
+            if(penggunaMasuk === 70){
+                document.body.style.backgroundColor = '#9370DB';
+
+                button.style.display ='none';
+
+                const image = document.createElement('img');
+                image.src = 'mk4.jpg';
+                image.id = 'image';
+
+                document.body.appendChild(image);
+                image.style.display = 'block';
+            }
+            else {
+                alert('HASIL SALAH!');
+            }
+        });
+    </script>
+</body>
+</html>
